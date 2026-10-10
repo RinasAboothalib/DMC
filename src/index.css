@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #fafbfc;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* DMC 3-Color Brand System strictly extracted from the official logo */
+:root {
+  --dmc-primary: #14532D;      /* Deep Forest Emerald - Primary Authority */
+  --dmc-secondary: #16A34A;    /* Vibrant Leaf Green - Secondary structure & gradients */
+  --dmc-accent: #22C55E;       /* Radiant Spring Green - CTAs & Interactive highlights */
+  --dmc-accent-hover: #15803D; /* Deepened action hover */
+  --dmc-emerald-light: #ECFDF5;/* Soft fresh tint */
+  --dmc-surface: #F8FAF9;      /* Pure clean canvas */
+  --dmc-slate: #0F172A;        /* Executive contrast */
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(22, 163, 74, 0.12);
+}
+
+.glass-panel-dark {
+  background: rgba(20, 83, 45, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}

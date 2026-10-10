@@ -1,0 +1,441 @@
+import { DestinationItem, ServiceItem, TestimonialItem } from '../types';
+
+export const DMC_COMPANY_INFO = {
+  brandName: 'DMC Immigration Consultants',
+  tagline: 'Your Global Journey Starts Here',
+  headquarters: 'Office 3604, Latifa Tower, Sheikh Zayed Road, Dubai, United Arab Emirates',
+  phone: '+971 4 344 7757',
+  phoneDisplay: '+971 4 344 7757',
+  whatsapp: '+971501620677',
+  whatsappDisplay: '+971 50 162 0677',
+  email: 'info@dm-consultant.ae',
+  businessHours: 'Monday – Saturday: 9:00 AM – 7:00 PM (GST)',
+  socialLinks: {
+    facebook: 'https://web.facebook.com/dmcimmigrationdubai/',
+    website: 'https://dm-consultant.ae',
+    linkedin: 'https://www.linkedin.com/company/dmc-immigrationconsultants',
+  },
+  established: '2015',
+  consultantsCount: '35+ In-House Specialists',
+};
+
+export const SERVICES_DATA: ServiceItem[] = [
+  {
+    id: 'skilled-migration',
+    name: 'Skilled Migration & Worker Visas',
+    shortDescription: 'Points-based migration pathways for experienced professionals seeking permanent residency in Canada, Australia, and New Zealand.',
+    category: 'skilled',
+    whoIsItFor: 'Experienced corporate professionals, engineers, IT specialists, healthcare practitioners, and educators holding recognized university qualifications.',
+    processOverview: [
+      'Comprehensive Points & Eligibility Audit (CRS / SkillSelect)',
+      'Educational Credential Assessment (ECA via WES, ICAS, or VETASSESS)',
+      'Language Benchmark Strategy (IELTS / CELPIP / PTE coaching advice)',
+      'Expression of Interest (EOI) and Provincial / State Nomination filing',
+      'Final Invitation to Apply (ITA) preparation and lodgement',
+    ],
+    typicalDocuments: [
+      'Degree certificates and academic transcripts',
+      'Official employment letters & salary bank records',
+      'Valid language test score reports',
+      'Police clearance certificates and identity documents',
+    ],
+    eligibilityFactors: [
+      'Age bracket (optimum points typically 21–39 years)',
+      'Minimum bachelor’s degree or accredited post-secondary diploma',
+      'At least 2–3 years of verifiable continuous professional experience',
+      'Adequate English or French proficiency (CLB 7+ or IELTS 6.5+)',
+    ],
+    destinationsCovered: ['Canada', 'Australia', 'United Kingdom', 'New Zealand'],
+    badgeText: 'Highest Inbound Demand',
+  },
+  {
+    id: 'business-investment',
+    name: 'Business & Investment Visas',
+    shortDescription: 'Strategic residency and commercial establishment pathways for business owners, active entrepreneurs, and international investors.',
+    category: 'business',
+    whoIsItFor: 'Successful entrepreneurs, business directors, and high-net-worth individuals wishing to expand operations or secure permanent residency overseas.',
+    processOverview: [
+      'Net Worth Audit and Source of Funds Verification',
+      'Target Jurisdiction and Investment Program Selection',
+      'Business Plan Formulation and Designated Entity Pitching (e.g., Angel / Incubator for Canada Start-Up)',
+      'Government Endorsement and Visa Petition Submission',
+      'Residency Grant and Ongoing Compliance Advisory',
+    ],
+    typicalDocuments: [
+      'Company incorporation papers and audited financial statements',
+      'Personal asset valuation and verified bank certificates',
+      'Comprehensive 5-year business expansion plan',
+      'Evidence of managerial executive history',
+    ],
+    eligibilityFactors: [
+      'Qualifying personal net worth or capital allocation',
+      'Documented senior ownership or executive management record',
+      'Feasible and innovative commercial venture plan',
+      'Clean source of capital verification',
+    ],
+    destinationsCovered: ['Canada', 'United Kingdom', 'Australia', 'Portugal & Greece (EU)'],
+    badgeText: 'Executive Priority',
+  },
+  {
+    id: 'employer-sponsored',
+    name: 'Employer-Sponsored Work Visas',
+    shortDescription: 'Guidance for skilled workers with qualifying overseas job offers or multinational corporate transfers.',
+    category: 'employer',
+    whoIsItFor: 'Professionals who have received a genuine overseas job offer or internal corporate transfer requiring work permit compliance.',
+    processOverview: [
+      'Verification of the Job Offer and Sponsoring Employer Accreditation',
+      'Assessment of LMIA (Canada) or Standard Business Sponsorship (Australia TSS)',
+      'Visa Petition compilation aligning job duties with occupational codes (NOC / ANZSCO)',
+      'Work permit filing with relevant immigration departments',
+      'Post-arrival work entitlement orientation and PR transition planning',
+    ],
+    typicalDocuments: [
+      'Formal employment contract and detailed job description',
+      'Employer labour market approval documentation',
+      'Applicant professional CV, references, and credentials',
+      'Valid passport and statutory background clearances',
+    ],
+    eligibilityFactors: [
+      'A bona fide full-time job offer from an eligible sponsor',
+      'Relevant qualifications meeting statutory industry licensing',
+      'Salary meeting prevailing market wage minimums',
+    ],
+    destinationsCovered: ['Canada', 'Australia', 'United Kingdom'],
+  },
+  {
+    id: 'student-visas',
+    name: 'Student Visas & Post-Study Pathways',
+    shortDescription: 'End-to-end guidance from international university selection through student visa approval and subsequent post-graduate work permits.',
+    category: 'student',
+    whoIsItFor: 'High school graduates, university students, and professionals pursuing master’s or post-graduate diplomas abroad to unlock global careers.',
+    processOverview: [
+      'Academic Profile Evaluation and Institution Selection',
+      'Application submission to Designated Learning Institutions (DLI / CRICOS)',
+      'Letter of Acceptance (LOA) procurement',
+      'Financial Proof and Statement of Purpose (SOP) preparation',
+      'Student Visa filing and Post-Graduation Work Permit (PGWP) mapping',
+    ],
+    typicalDocuments: [
+      'Academic transcripts and graduation diplomas',
+      'Institutional Acceptance Letter (LOA / CoE / CAS)',
+      'Proof of tuition payment and sufficient living fund statements',
+      'Statement of Purpose highlighting genuine temporary entrant intent',
+    ],
+    eligibilityFactors: [
+      'Accepted enrolment at an accredited government-recognized institution',
+      'Verifiable liquid financial funds covering tuition and living costs',
+      'Academic language proficiency scores',
+    ],
+    destinationsCovered: ['Canada', 'Australia', 'United Kingdom', 'New Zealand'],
+    badgeText: 'Direct Career Route',
+  },
+  {
+    id: 'family-sponsorship',
+    name: 'Family & Spousal Sponsorship',
+    shortDescription: 'Reuniting families across borders through spousal sponsorship, dependent child petitions, and parental visitor pathways.',
+    category: 'family',
+    whoIsItFor: 'Spouses, common-law partners, dependent children, and parents of permanent residents or citizens in target destinations.',
+    processOverview: [
+      'Sponsor Eligibility Evaluation and Financial Commitment Assessment',
+      'Relationship Authenticity Documentation and Cross-Examination',
+      'Dual application pack preparation (Sponsor + Principal Applicant)',
+      'Lodgement with statutory immigration departments',
+      'Response to procedural fairness or requests for further information',
+    ],
+    typicalDocuments: [
+      'Marriage certificate or proof of common-law cohabitation',
+      'Sponsor’s proof of citizenship or permanent resident status',
+      'Joint financial records, tenancy agreements, and communications history',
+      'Health clearances and statutory declarations',
+    ],
+    eligibilityFactors: [
+      'Sponsor must hold valid PR or citizenship status',
+      'Genuine, legally binding marital or parental relationship',
+      'Sponsor must not be subject to sponsorship bars or disqualifications',
+    ],
+    destinationsCovered: ['Canada', 'Australia', 'United Kingdom'],
+  },
+  {
+    id: 'overseas-business-resettlement',
+    name: 'Overseas Business Establishment & Resettlement',
+    shortDescription: 'Corporate branch incorporation abroad paired with comprehensive executive resettlement and relocation advisory.',
+    category: 'resettlement',
+    whoIsItFor: 'UAE and GCC businesses seeking to establish international holding companies or subsidiaries, and executives needing smooth onboarding abroad.',
+    processOverview: [
+      'Corporate entity structure consultation with target jurisdiction specialists',
+      'Overseas branch registration and statutory compliance advisory',
+      'Executive relocation work visa filings',
+      'Pre-landing briefing: banking setup, tax orientation, and accommodation guidance',
+      'Settlement concierge and community integration support',
+    ],
+    typicalDocuments: [
+      'Parent company trade license and audited financials',
+      'Board resolution authorizing overseas expansion',
+      'Executive passports and employment agreements',
+      'Lease agreements and statutory filings',
+    ],
+    eligibilityFactors: [
+      'Active commercial business with established revenue track record',
+      'Clear commercial justification for overseas entity establishment',
+      'Senior executive personnel designated for overseas management',
+    ],
+    destinationsCovered: ['Canada', 'United Kingdom', 'Australia', 'European Union'],
+    badgeText: 'Corporate Solution',
+  },
+];
+
+export const DESTINATIONS_DATA: DestinationItem[] = [
+  {
+    id: 'canada',
+    name: 'Canada',
+    code: 'CA',
+    tagline: 'World-Class Healthcare, Stable Economy, Welcoming Permanent Residency',
+    overview: 'Canada remains one of the world’s most sought-after immigration destinations, offering well-defined statutory pathways to Permanent Residency (PR) and citizenship.',
+    popularPathways: [
+      {
+        title: 'Express Entry (FSWP / CEC)',
+        description: 'Federal points-based selection prioritizing skilled work experience, university degrees, and official language benchmarks.',
+        suitableFor: 'Educated professionals under 40 with strong English/French skills.',
+      },
+      {
+        title: 'Provincial Nominee Programs (PNP)',
+        description: 'Provinces (Ontario, BC, Alberta, Saskatchewan) nominate workers fulfilling regional labour and economic demands.',
+        suitableFor: 'Candidates with in-demand skills or regional ties.',
+      },
+      {
+        title: 'Canada Start-Up Visa (SUV)',
+        description: 'Permanent residency pathway for innovative founders securing support from designated Canadian angel or incubator entities.',
+        suitableFor: 'Entrepreneurs with scalable technological or business models.',
+      },
+    ],
+    keyRequirements: [
+      'Valid Educational Credential Assessment (ECA)',
+      'Language score: CLB 7 or higher in IELTS / CELPIP',
+      'Comprehensive clean background check and statutory medical exam',
+      'Settlement funds verification (unless exempt by valid Canadian job offer)',
+    ],
+    processingTimeInfo: 'Express Entry federal processing typically ranges from 6 to 9 months post-ITA submission, subject to IRCC queue volumes.',
+    imageAsset: '/src/assets/images/destination_canada_1791647634095.jpg',
+  },
+  {
+    id: 'australia',
+    name: 'Australia',
+    code: 'AU',
+    tagline: 'High Standard of Living, Robust Economy, Sun-Drenched Cities',
+    overview: 'Australia’s General Skilled Migration (GSM) program welcomes skilled professionals through subclass 189, 190, and 491 visas, leading directly to permanent residency.',
+    popularPathways: [
+      {
+        title: 'Skilled Independent (Subclass 189)',
+        description: 'Points-tested permanent visa allowing skilled individuals to live and work anywhere in Australia without state or employer sponsorship.',
+        suitableFor: 'High-scoring professionals on the Medium and Long-term Strategic Skills List.',
+      },
+      {
+        title: 'Skilled Nominated (Subclass 190)',
+        description: 'Permanent residency visa nominated by an Australian state or territory government experiencing specific regional skill shortages.',
+        suitableFor: 'Professionals matching individual state priority lists.',
+      },
+      {
+        title: 'Employer Nomination Scheme (Subclass 186/482)',
+        description: 'Direct entry or temporary-to-permanent visa for candidates sponsored by approved Australian business employers.',
+        suitableFor: 'Candidates with direct employment offers from Australian firms.',
+      },
+    ],
+    keyRequirements: [
+      'Positive Skills Assessment from designated authority (ACS, VETASSESS, Engineers Australia)',
+      'Minimum 65 points on the Department of Home Affairs points matrix',
+      'Competent or Proficient English (IELTS / PTE Academic)',
+      'Age under 45 years at time of formal invitation',
+    ],
+    processingTimeInfo: 'SkillSelect invitations depend on quarterly state rounds; visa processing post-lodgement generally spans 7 to 12 months.',
+    imageAsset: '/src/assets/images/destination_australia_1791647644803.jpg',
+  },
+  {
+    id: 'united-kingdom',
+    name: 'United Kingdom',
+    code: 'UK',
+    tagline: 'Global Financial Capital, Prestigious Universities, Direct Talent Visas',
+    overview: 'The UK points-based immigration system provides clear pathways for skilled workers, entrepreneurs, and global innovators seeking settlement in London and across Britain.',
+    popularPathways: [
+      {
+        title: 'Skilled Worker Visa',
+        description: 'Enables eligible individuals to come to or stay in the UK to do an approved job with an licensed sponsor employer.',
+        suitableFor: 'Professionals with confirmed UK job offers in qualifying occupations.',
+      },
+      {
+        title: 'Innovator Founder Visa',
+        description: 'For individuals seeking to establish an innovative, viable, and scalable commercial business endorsed by an approved body.',
+        suitableFor: 'Tech founders and experienced entrepreneurs.',
+      },
+      {
+        title: 'Global Talent Visa',
+        description: 'A pathway for leaders or emerging leaders in academia, arts, culture, and digital technology without requiring an initial job offer.',
+        suitableFor: 'Senior researchers, digital technology specialists, and creative leaders.',
+      },
+    ],
+    keyRequirements: [
+      'Certificate of Sponsorship (CoS) for work routes or official Endorsement Letter',
+      'English language requirement (CEFR B1 or higher)',
+      'Minimum salary thresholds as mandated by the UK Home Office',
+      'Standard criminal record certificate and maintenance funds',
+    ],
+    processingTimeInfo: 'Home Office standard out-of-country decisions typically take 3 to 8 weeks, with priority processing options available.',
+    imageAsset: '/src/assets/images/destination_uk_london_1791647657104.jpg',
+  },
+  {
+    id: 'new-zealand',
+    name: 'New Zealand',
+    code: 'NZ',
+    tagline: 'Pristine Lifestyle, Safe Communities, Modern Skilled Migrant Route',
+    overview: 'New Zealand’s refreshed 6-Point Skilled Migrant Category (SMC) rewards recognized qualifications, occupational registration, and local employment earnings.',
+    popularPathways: [
+      {
+        title: 'Skilled Migrant Category (SMC)',
+        description: 'Six-point system based on qualifications, registered professional licensing, or high income, coupled with skilled job offers.',
+        suitableFor: 'Engineers, doctors, IT architects, and tertiary educators.',
+      },
+      {
+        title: 'Green List Straight to Residence',
+        description: 'Direct residence pathway for candidates in Tier 1 in-demand occupations with an accredited NZ employer.',
+        suitableFor: 'Healthcare workers, construction managers, and IT specialists.',
+      },
+      {
+        title: 'Accredited Employer Work Visa (AEWV)',
+        description: 'Temporary work permit allowing candidates to work for certified employers while accumulating residency eligibility.',
+        suitableFor: 'Experienced tradespeople and technical specialists.',
+      },
+    ],
+    keyRequirements: [
+      'Offer of skilled employment with an accredited New Zealand employer',
+      'NZQA International Qualification Assessment if required',
+      'English language competence (IELTS 6.5 minimum)',
+      'Under 56 years of age for resident class visas',
+    ],
+    processingTimeInfo: 'Green List applications average 2 to 4 months; SMC applications average 4 to 8 months once documentation is verified.',
+    imageAsset: '/src/assets/images/hero_dubai_skyline_1791647620679.jpg',
+  },
+  {
+    id: 'europe-golden-visa',
+    name: 'European Union & Golden Visas',
+    tagline: 'Schengen Freedom of Movement, Residency Through Investment',
+    code: 'EU',
+    overview: 'Residency-by-investment and EU Blue Card schemes across Portugal, Greece, and Spain offering visa-free travel throughout the 29 Schengen member nations.',
+    popularPathways: [
+      {
+        title: 'Greece Golden Visa',
+        description: 'Five-year renewable residence permit granted through qualifying real estate acquisitions or capital investments.',
+        suitableFor: 'High-net-worth investors seeking European family residency.',
+      },
+      {
+        title: 'Portugal Fund Investment Pathway',
+        description: 'Residency through qualifying non-real estate investment funds, leading to citizenship eligibility after 5 years.',
+        suitableFor: 'Investors seeking European passport eligibility with low physical stay rules.',
+      },
+      {
+        title: 'EU Blue Card Scheme',
+        description: 'Work permit and residence title for highly qualified non-EU nationals employed in Germany and other EU member states.',
+        suitableFor: 'Senior engineers, developers, and corporate managers.',
+      },
+    ],
+    keyRequirements: [
+      'Clean source of investment funds and clean judicial background check',
+      'Qualifying capital deployment in vetted financial or real estate assets',
+      'Comprehensive private health insurance coverage in the EU',
+    ],
+    processingTimeInfo: 'Golden Visa approvals generally span 6 to 12 months depending on the jurisdiction and biometrics appointment queue.',
+    imageAsset: '/src/assets/images/consultation_office_1791647668616.jpg',
+  },
+];
+
+export const PROCESS_STEPS = [
+  {
+    number: '01',
+    title: 'Initial Consultation & Assessment',
+    description: 'We meet in-person at our Dubai headquarters or over secure video call to understand your career aspirations, family profile, and timeline.',
+    duration: '1–2 Days',
+    deliverable: 'Eligibility audit & pathway breakdown',
+  },
+  {
+    number: '02',
+    title: 'Preliminary Pathway Assessment',
+    description: 'Our senior specialists evaluate your CRS points, ANZSCO/NOC occupation codes, and statutory eligibility across multiple jurisdictions.',
+    duration: '3–5 Days',
+    deliverable: 'Comparative destination feasibility report',
+  },
+  {
+    number: '03',
+    title: 'Documentation & Preparation',
+    description: 'We provide structured checklists for credential evaluations (WES/VETASSESS), employment references, language test benchmarking, and police certificates.',
+    duration: '2–4 Weeks',
+    deliverable: 'Audit-ready legal documentation dossier',
+  },
+  {
+    number: '04',
+    title: 'Application Support & Filing',
+    description: 'Our team prepares and coordinates the formal lodgement of your EOI, Provincial nomination, or direct visa petition in accordance with immigration guidelines.',
+    duration: '1–2 Weeks',
+    deliverable: 'Official government receipt & application tracking ID',
+  },
+  {
+    number: '05',
+    title: 'Follow-up & Pre-Landing Orientation',
+    description: 'We track your application through government milestones, handle further information requests, and provide pre-landing banking and settlement guidance upon grant.',
+    duration: 'Ongoing until arrival',
+    deliverable: 'Decision briefing & resettlement advisory',
+  },
+];
+
+export const TESTIMONIALS_DATA: TestimonialItem[] = [
+  {
+    id: 'test-1',
+    clientName: 'Tariq Al-Mansoor',
+    profession: 'Senior Cloud Solutions Architect',
+    originCountry: 'UAE',
+    destinationCountry: 'Canada',
+    visaCategory: 'Express Entry (FSW) Permanent Residency',
+    quote: 'DMC gave me complete clarity on how to boost my CRS score through strategic ECA evaluation and targeted IELTS band guidance. Their team on Sheikh Zayed Road is organized and completely transparent.',
+    yearApproved: '2024',
+  },
+  {
+    id: 'test-2',
+    clientName: 'Priya & Rahul Sharma',
+    profession: 'Healthcare Specialist & Financial Analyst',
+    originCountry: 'UAE',
+    destinationCountry: 'Australia',
+    visaCategory: 'Skilled Nominated (Subclass 190)',
+    quote: 'Navigating state nomination in Victoria felt overwhelming until DMC mapped out our exact timeline. No false promises, just meticulous document auditing and realistic expectations.',
+    yearApproved: '2024',
+  },
+  {
+    id: 'test-3',
+    clientName: 'David & Catherine Evans',
+    profession: 'Fintech Founder & Director',
+    originCountry: 'UAE',
+    destinationCountry: 'United Kingdom',
+    visaCategory: 'Innovator Founder Visa',
+    quote: 'The team at DMC helped refine our business case for UK endorsement. Their commercial understanding combined with immigration law knowledge made the process smooth and structured.',
+    yearApproved: '2025',
+  },
+];
+
+export const FAQS_DATA = [
+  {
+    question: 'How do I know if I qualify for Canadian or Australian immigration?',
+    answer: 'Eligibility depends on several quantifiable factors: age, highest level of education, years of verifiable skilled work experience, language proficiency (IELTS/PTE), and adaptability factors. During our preliminary assessment, we calculate your exact CRS or SkillSelect points and advise on the most viable pathways.',
+  },
+  {
+    question: 'Does DMC Immigration Consultants guarantee visa approvals?',
+    answer: 'No reputable immigration consultancy can guarantee visa approvals. Final decisions are made exclusively by government immigration authorities (such as IRCC in Canada or the Department of Home Affairs in Australia). What DMC guarantees is rigorous eligibility vetting, error-free documentation, and transparent legal guidance throughout the process.',
+  },
+  {
+    question: 'Where is your Dubai office located and can I meet the consultants in person?',
+    answer: 'Yes! Our primary office is located at Office 3604, Latifa Tower on Sheikh Zayed Road, Dubai, UAE (adjacent to the World Trade Centre Metro Station). We welcome clients for in-person consultations Monday through Saturday from 9:00 AM to 7:00 PM.',
+  },
+  {
+    question: 'What is the typical timeframe for skilled migration processing?',
+    answer: 'Timeframes vary depending on the destination and program. For example, Canadian Express Entry typically averages 6 to 9 months post-ITA, while Australian General Skilled Migration typically spans 8 to 12 months post-lodgement. Preparation of credentials (ECA and language tests) usually takes 1 to 2 months prior to filing.',
+  },
+  {
+    question: 'Do you offer assistance with business setup and overseas resettlement?',
+    answer: 'Yes. Beyond standard visa applications, DMC provides dedicated overseas business establishment advice and relocation support for entrepreneurs, branch expansions, and families transitioning abroad.',
+  },
+];
